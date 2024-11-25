@@ -1,0 +1,250 @@
+/* .slider-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  .slider {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease;
+
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      position: relative;
+      color: #fff;
+
+      #backgroundVideo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; 
+      }
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  .slide__add-btn {
+    position: absolute;
+    top: 2vw;
+    right: 3vw;
+  }
+
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  button {
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  .delete-buttons {
+    margin-top: 20px;
+  }
+
+  .delete-buttons div {
+    margin-bottom: 10px;
+  }
+
+  .delete-buttons button {
+    margin-left: 10px;
+    background-color: #f44336;
+  }
+
+  .delete-buttons button:hover {
+    background-color: #e53935;
+  }
+} */
+
+.slider-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  .slider {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease;
+
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      position: relative;
+      color: #fff;
+      z-index: 2;
+      background-color: #000;
+
+      #backgroundVideo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      iframe {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 100vh; /* 화면 높이를 꽉 채움 */
+        aspect-ratio: 16 / 9; /* 16:9 비율 유지 */
+        width: auto; /* 가로는 자동으로 비율에 맞춰 조정 */
+        transform: translate(-50%, -50%) scale(1.3); /* 아이프레임 크기를 1.1배 확대 */
+
+        object-fit: cover;
+        z-index: -1;
+        border: none;
+        pointer-events: none;
+      }
+      p {
+        z-index: 1;
+        position: relative;
+      }
+    }
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  .slide__add-btn {
+    position: absolute;
+    top: 2vw;
+    right: 3vw;
+  }
+
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  button {
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  .delete-buttons {
+    margin-top: 20px;
+  }
+
+  .delete-buttons div {
+    margin-bottom: 10px;
+  }
+
+  .delete-buttons button {
+    margin-left: 10px;
+    background-color: #f44336;
+  }
+
+  .delete-buttons button:hover {
+    background-color: #e53935;
+  }
+}
